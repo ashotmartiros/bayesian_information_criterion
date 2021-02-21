@@ -44,6 +44,7 @@ def model_selection(degrees, plot):
         print('MSE: %.3f' % mse)
         print('BIC: %.3f' % bic)
     if plot:
+        plt.rcParams['axes.grid'] = True 
         fig, (ax1, ax2) = plt.subplots(1, 2, figsize = (12, 5))
         plt.subplots_adjust(left=0.125, bottom=0.1, right=0.9, top=0.9, wspace=0.6, hspace=0.2)
         ax1.plot(params, mses, 'tab:green')
@@ -53,7 +54,7 @@ def model_selection(degrees, plot):
         fig.savefig("plot.png")
 
 if __name__ == "__main__":
-    degrees = range(1, 10)
+    degrees = range(1, 14)
     model_selection(degrees, True)
 
 
