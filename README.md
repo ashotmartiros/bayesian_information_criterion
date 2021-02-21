@@ -1,0 +1,2 @@
+# bayesian_information_criterion
+Simple bayesian information criterion example
